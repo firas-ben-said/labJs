@@ -37,3 +37,12 @@ function clearInputs() {
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
 }
+
+function deletebook(index) {
+    if (index >= 0 && index < books.length) {
+        books.splice(index, 1);
+        showbooks();
+    } else {
+        alert('Invalid book index.');
+    }
+}
